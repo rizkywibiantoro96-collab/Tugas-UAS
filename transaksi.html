@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Transaksi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body onload="isiProdukOtomatis()">
+    <header>
+        <h1>Form Transaksi</h1>
+        <marquee>Isi data dengan benar untuk proses pesanan</marquee>
+    </header>
+
+    <nav>
+        <a href="index.html">Produk</a>
+        <a href="transaksi.html">Transaksi</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="tentang.html">Tentang</a>
+    </nav>
+
+    <div class="container">
+        <main>
+            <form onsubmit="event.preventDefault(); simpanTransaksi();">
+                <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                <select id="produk" required>
+                    <option value="">Pilih Produk</option>
+                    <option value="Beras Raja Platinum 5KG">Beras Raja Platinum 5KG</option>
+                    <option value="Beras Sania Premium">Beras Sania Premium</option>
+                </select>
+                <input type="number" id="jumlah" placeholder="Jumlah" required>
+                <textarea id="alamat" placeholder="Alamat Lengkap" required></textarea>
+                <button type="submit" class="btn">Buat Pesanan</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
